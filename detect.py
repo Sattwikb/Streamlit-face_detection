@@ -6,12 +6,6 @@ import numpy as np
 import os
 
 
-@st.cache
-def load_image(img):
-    im = Image.open(img)
-    return im
-
-
 # Cascades
 try:
     face_cascade = cv2.CascadeClassifier(
@@ -88,7 +82,7 @@ def main():
     """Face Detection App"""
 
     st.title("Face Dectection App")
-    st.text("Build with Streamit and OpenCV")
+    st.write("**Build with Streamit and OpenCV**")
 
     activities = ["Detection", "About"]
     choice = st.sidebar.selectbox("Select Activities", activities)
@@ -97,7 +91,7 @@ def main():
         st.subheader("Face Detection")
 
         image_file = st.file_uploader(
-            "Upload Image", type=['jpg', 'png', 'jepg'])
+            "Upload Image", type=['jpg', 'png', 'jpeg'])
         if image_file is not None:
             our_image = Image.open(image_file)
             st.text("Original Image")
@@ -162,6 +156,18 @@ def main():
         st.subheader("About")
         st.markdown("This is a simple face detection app made with OpenCV and Streamlit and deployed on Heroku. This is just a basic app it's not perfect yet.")
         st.text("Autor: Sattwik Raj (SR)")
+        st.write(
+                '''
+		**Haar Cascade** is an object detection algorithm.
+		It can be used to detect objects in images or videos. 
+		The algorithm has four stages:
+			1. Haar Feature Selection 
+			2. Creating  Integral Images
+			3. Adaboost Training
+			4. Cascading Classifiers
+Read more :point_right: https://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html
+https://sites.google.com/site/5kk73gpu2012/assignment/viola-jones-face-detection#TOC-Image-Pyramid
+		''')
         st.text("Source Code: https://github.com/Sattwikb/Streamlit-face_detection.git")
         st.text("Instagram: @sattwik_raj_7")
         st.text("Team Instgram: @kni8angle")
