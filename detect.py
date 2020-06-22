@@ -168,7 +168,8 @@ def main():
 Read more :point_right: https://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html
 https://sites.google.com/site/5kk73gpu2012/assignment/viola-jones-face-detection#TOC-Image-Pyramid
 		''')
-        st.text("Source Code: https://github.com/Sattwikb/Streamlit-face_detection.git")
+        st.write(
+            "Source Code: https://github.com/Sattwikb/Streamlit-face_detection.git")
         st.text("Instagram: @sattwik_raj_7")
         st.text("Team Instgram: @kni8angle")
         st.text("Twitter: @SattwikRaj")
