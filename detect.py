@@ -14,9 +14,9 @@ def load_image(img):
 # Cascades
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-eye_cascade = cv2.CascadeClassifie('haarcascade_eye.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
-smile_cascade = cv2.CascadeClassifie('haarcascade_smile.xml')
+smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
 
 # Detection Features
 
