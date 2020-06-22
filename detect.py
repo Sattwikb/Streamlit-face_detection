@@ -3,6 +3,7 @@ import streamlit as st
 import cv2
 from PIL import Image, ImageEnhance
 import numpy as np
+import os
 
 
 @st.cache
@@ -12,11 +13,15 @@ def load_image(img):
 
 
 # Cascades
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-
-smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
+try:
+    face_cascade = cv2.CascadeClassifier(
+        cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    eye_cascade = cv2.CascadeClassifier(
+        cv2.data.haarcascades + 'haarcascade_eye.xml')
+    smile_cascade = cv2.CascadeClassifier(
+        cv2.data.haarcascades + 'haarcascade_smile.xml')
+except Exception:
+    st.write("Error loading cascade classifiers")
 
 # Detection Features
 
