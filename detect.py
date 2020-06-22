@@ -3,7 +3,6 @@ import streamlit as st
 import cv2
 from PIL import Image, ImageEnhance
 import numpy as np
-import os
 
 
 @st.cache
