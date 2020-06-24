@@ -82,7 +82,7 @@ def main():
     """Face Detection App"""
 
     st.title("Face Dectection App")
-    st.write("**Build with Streamit and OpenCV**")
+    st.write("**Build with Streamlit and OpenCV**")
 
     activities = ["Detection", "About"]
     choice = st.sidebar.selectbox("Select Activities", activities)
@@ -155,7 +155,7 @@ def main():
     elif choice == "About":
         st.subheader("About")
         st.markdown("This is a simple face detection app made with OpenCV and Streamlit and deployed on Heroku. This is just a basic app it's not perfect yet.")
-        st.text("Autor: Sattwik Raj (SR)")
+        st.text("Author: Sattwik Raj (SR)")
         st.write(
                 '''
 		**Haar Cascade** is an object detection algorithm.
